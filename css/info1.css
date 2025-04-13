@@ -1,0 +1,305 @@
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #f8f9fa;
+    --accent-color: #ffc107;
+    --text-color: #212529;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    color: var(--primary-color);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.school-info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.school-info p {
+    font-size: 14px;
+}
+
+.contact-info {
+    text-align: right;
+    font-size: 14px;
+}
+
+
+/* Navigation */
+nav {
+    background-color: #e7e7e7;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+
+.current-page a {
+    color: var(--primary-color) !important;
+}
+
+.nav-menu li a {
+    border-bottom: 4px solid transparent;
+    display: block;
+    color: rgb(153, 153, 153);
+    text-decoration: none;
+    padding: 15px 10px;
+    margin-left: 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: var(--text-color);
+    border-bottom: 4px solid #EF7c00;
+}
+
+/* Dropdown Navigation Styles */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #e7e7e7;
+    min-width: 280px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    border-bottom: 4px solid transparent;
+}
+
+
+.dropdown-toggle::after {
+    content: '▼';
+    font-size: 11px;
+    position: absolute;
+    right: -3px;
+    transform: translateY(30%);
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+    transform: translateY(30%) rotate(180deg);
+}
+
+/* Page Header */
+.page-header {
+    background-color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.page-header h2 {
+    font-size: 32px;
+    color: wheat;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.breadcrumb li {
+    font-size: 16px;
+    margin-left: 15px;
+    color: var(--secondary-color);
+}
+
+
+.breadcrumb a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+/*Tin tuc doan */
+.youth-union-news {
+    padding: 30px 0;
+}
+
+.youth-news-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.youth-news-item {
+    flex: 1;
+    min-width: 35%;
+    margin: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.youth-news-item:hover {
+    transform: translateY(-5%);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.youth-news-image {
+    height: 250px;
+    width: 500px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.youth-news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.youth-news-content {
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.youth-news-content h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.youth-news-date {
+    color: #6c757d;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.youth-news-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.view-all {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.view-all-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+.view-all-link:hover {
+    background-color: #004494;
+}
+
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #a3a3a3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #424242;
+    font-size: 14px;
+    color: #a3a3a3;
+}

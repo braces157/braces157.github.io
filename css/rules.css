@@ -1,0 +1,361 @@
+:root {
+    --primary-color: #0056b3;
+    --secondary-color: #f8f9fa;
+    --accent-color: #ffc107;
+    --text-color: #212529;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    color: var(--primary-color);
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+
+.school-info h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.school-info p {
+    font-size: 14px;
+}
+
+.contact-info {
+    text-align: right;
+    font-size: 14px;
+}
+
+
+/* Navigation */
+nav {
+    background-color: #e7e7e7;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li {
+    position: relative;
+}
+
+
+.current-page a {
+    border-bottom: 4px solid #EF7c00 !important;
+    color: var(--primary-color) !important;
+}
+
+.nav-menu li a {
+    border-bottom: 4px solid transparent;
+    display: block;
+    color: rgb(153, 153, 153);
+    text-decoration: none;
+    padding: 15px 10px;
+    margin-left: 15px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: var(--text-color);
+    border-bottom: 4px solid #EF7c00;
+}
+
+/* Dropdown Navigation Styles */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #e7e7e7;
+    min-width: 280px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    list-style: none;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a:hover {
+    border-bottom: 4px solid transparent;
+}
+
+
+.dropdown-toggle::after {
+    content: '▼';
+    font-size: 11px;
+    position: absolute;
+    right: -3px;
+    transform: translateY(30%);
+    transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+    transform: translateY(30%) rotate(180deg);
+}
+
+/* Page Header */
+.page-header {
+    background-color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding: 40px 0;
+    text-align: center;
+}
+
+.page-header h2 {
+    font-size: 32px;
+    color: wheat;
+    margin-bottom: 10px;
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.breadcrumb li {
+    font-size: 16px;
+    margin-left: 15px;
+    color: var(--secondary-color);
+}
+
+
+.breadcrumb a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+
+
+.rules-section {
+    padding: 40px 0;
+    background-color: #f5f7fa;
+}
+
+
+
+.rules-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(540px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.rule-category {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.rule-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.rule-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.rule-icon {
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.rule-icon img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+
+.rule-header h3 {
+    font-size: 20px;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.rule-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rule-list li {
+    position: relative;
+    padding: 10px 0 10px 25px;
+    border-bottom: 1px dashed #e9ecef;
+    font-size: 15px;
+}
+
+.rule-list li:last-child {
+    border-bottom: none;
+}
+
+.rule-list li:before {
+    content: "•";
+    color: var(--accent-color);
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+
+.rule-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e9ecef;
+}
+
+.rule-update {
+    font-size: 13px;
+    color: #6c757d;
+}
+
+.rule-detail {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.rule-detail:hover {
+    color: var(--accent-color);
+}
+
+.rules-download {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #004494;
+}
+
+.download-icon {
+    margin-left: 8px;
+    font-style: normal;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    color: white;
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #a3a3a3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #424242;
+    font-size: 14px;
+    color: #a3a3a3;
+}
