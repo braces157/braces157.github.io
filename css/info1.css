@@ -230,6 +230,14 @@ nav {
     margin-bottom: 20px;
 }
 
+.read-more{
+    text-decoration: none;
+    color:var(--primary-color);
+}
+.read-more:hover{
+    color: var(--accent-color);
+}
+
 .view-all {
     text-align: center;
     margin-top: 20px;
