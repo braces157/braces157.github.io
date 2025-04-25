@@ -39,6 +39,7 @@ header {
     background-color: var(--secondary-color);
     padding: 10px 0;
     color: var(--primary-color);
+    
 }
 
 .header-top {
@@ -75,6 +76,9 @@ header {
 /* Navigation */
 nav {
     background-color: #e7e7e7;
+    position: sticky;
+    top:0;
+    z-index: 1000;
 }
 
 .nav-menu {
@@ -105,6 +109,14 @@ nav {
 .nav-menu li a:hover {
     color: var(--text-color);
     border-bottom: 4px solid #EF7c00;
+}
+/* Running text */
+.running-text {
+    margin: auto 0 auto 300px;
+}
+.running-text p {
+    text-align: center;
+    color: var(--primary-color);
 }
 
 /* Dropdown Navigation Styles */
