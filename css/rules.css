@@ -66,6 +66,9 @@ header {
 /* Navigation */
 nav {
     background-color: #e7e7e7;
+    position: sticky;
+    top:0;
+    z-index: 1000;
 }
 
 .nav-menu {
@@ -250,7 +253,6 @@ nav {
     content: "•";
     color: var(--accent-color);
     font-size: 18px;
-    position: absolute;
     left: 0;
     top: 9px;
 }
