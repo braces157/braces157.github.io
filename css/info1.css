@@ -66,6 +66,9 @@ header {
 /* Navigation */
 nav {
     background-color: #e7e7e7;
+    position: sticky;
+    top:0;
+    z-index: 1000;
 }
 
 .nav-menu {
@@ -96,6 +99,7 @@ nav {
     color: var(--text-color);
     border-bottom: 4px solid #EF7c00;
 }
+
 
 /* Dropdown Navigation Styles */
 
@@ -229,7 +233,6 @@ nav {
     font-size: 14px;
     margin-bottom: 20px;
 }
-
 .read-more{
     text-decoration: none;
     color:var(--primary-color);
