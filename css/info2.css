@@ -66,6 +66,9 @@ header {
 /* Navigation */
 nav {
     background-color: #e7e7e7;
+    position: sticky;
+    top:0;
+    z-index: 1000;
 }
 
 .nav-menu {
