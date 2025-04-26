@@ -253,7 +253,7 @@ nav {
     content: "•";
     color: var(--accent-color);
     font-size: 18px;
-    left: 0;
+    margin-right: 5px;
     top: 9px;
 }
 
